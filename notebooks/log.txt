@@ -1,0 +1,190 @@
+Running command: python3 /mnt/scratch/alphafold/docker/run_docker.py --fasta_paths /mnt/users/chris01/CombFold/reference-fasta/MTR3_RRP43.fasta --max_template_date 2022-01-01 --data_dir /mnt/scratch/alphafold_ref --output_dir /mnt/users/chris01/combfold-experiment/2nn6 --model_preset multimer
+I0918 13:44:57.717632 139829652374592 run_docker.py:116] Mounting /mnt/users/chris01/CombFold/reference-fasta -> /mnt/fasta_path_0
+I0918 13:44:57.717741 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref90 -> /mnt/uniref90_database_path
+I0918 13:44:57.717803 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/mgnify -> /mnt/mgnify_database_path
+I0918 13:44:57.717846 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref -> /mnt/data_dir
+I0918 13:44:57.717881 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif/mmcif_files -> /mnt/template_mmcif_dir
+I0918 13:44:57.717917 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif -> /mnt/obsolete_pdbs_path
+I0918 13:44:57.717952 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniprot -> /mnt/uniprot_database_path
+I0918 13:44:57.717987 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_seqres -> /mnt/pdb_seqres_database_path
+I0918 13:44:57.718023 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref30 -> /mnt/uniref30_database_path
+I0918 13:44:57.718060 139829652374592 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/bfd -> /mnt/bfd_database_path
+I0918 13:44:58.244300 139829652374592 run_docker.py:258] /bin/bash: /opt/conda/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+I0918 13:45:01.071362 139829652374592 run_docker.py:258] I0918 17:45:01.070675 140047227613824 templates.py:858] Using precomputed obsolete pdbs /mnt/obsolete_pdbs_path/obsolete.dat.
+I0918 13:45:01.740428 139829652374592 run_docker.py:258] I0918 17:45:01.739799 140047227613824 xla_bridge.py:863] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA
+I0918 13:45:01.741062 139829652374592 run_docker.py:258] I0918 17:45:01.740611 140047227613824 xla_bridge.py:863] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0918 13:45:08.233498 139829652374592 run_docker.py:258] I0918 17:45:08.232654 140047227613824 run_alphafold.py:524] Have 25 models: ['model_1_multimer_v3_pred_0', 'model_1_multimer_v3_pred_1', 'model_1_multimer_v3_pred_2', 'model_1_multimer_v3_pred_3', 'model_1_multimer_v3_pred_4', 'model_2_multimer_v3_pred_0', 'model_2_multimer_v3_pred_1', 'model_2_multimer_v3_pred_2', 'model_2_multimer_v3_pred_3', 'model_2_multimer_v3_pred_4', 'model_3_multimer_v3_pred_0', 'model_3_multimer_v3_pred_1', 'model_3_multimer_v3_pred_2', 'model_3_multimer_v3_pred_3', 'model_3_multimer_v3_pred_4', 'model_4_multimer_v3_pred_0', 'model_4_multimer_v3_pred_1', 'model_4_multimer_v3_pred_2', 'model_4_multimer_v3_pred_3', 'model_4_multimer_v3_pred_4', 'model_5_multimer_v3_pred_0', 'model_5_multimer_v3_pred_1', 'model_5_multimer_v3_pred_2', 'model_5_multimer_v3_pred_3', 'model_5_multimer_v3_pred_4']
+I0918 13:45:08.233699 139829652374592 run_docker.py:258] I0918 17:45:08.232832 140047227613824 run_alphafold.py:538] Using random seed 364675333836513344 for the data pipeline
+I0918 13:45:08.233783 139829652374592 run_docker.py:258] I0918 17:45:08.233043 140047227613824 run_alphafold.py:245] Predicting MTR3_RRP43
+I0918 13:45:08.235676 139829652374592 run_docker.py:258] I0918 17:45:08.234969 140047227613824 pipeline_multimer.py:210] Running monomer pipeline on chain A: MTR3_RRP43
+I0918 13:45:08.235910 139829652374592 run_docker.py:258] I0918 17:45:08.235177 140047227613824 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /tmp/tmpr94xx4v5/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /tmp/tmpqkldtnfa.fasta /mnt/uniref90_database_path/uniref90.fasta"
+I0918 13:45:08.236544 139829652374592 run_docker.py:258] I0918 17:45:08.236116 140047227613824 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I0918 13:45:08.245620 139829652374592 run_docker.py:258] I0918 17:45:08.245175 140047227613824 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 0.009 seconds
+I0918 13:45:08.246078 139829652374592 run_docker.py:258] Traceback (most recent call last):
+I0918 13:45:08.246233 139829652374592 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 570, in <module>
+I0918 13:45:08.246355 139829652374592 run_docker.py:258] app.run(main)
+I0918 13:45:08.246422 139829652374592 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 312, in run
+I0918 13:45:08.246482 139829652374592 run_docker.py:258] _run_main(main, args)
+I0918 13:45:08.246535 139829652374592 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 258, in _run_main
+I0918 13:45:08.246588 139829652374592 run_docker.py:258] sys.exit(main(argv))
+I0918 13:45:08.246636 139829652374592 run_docker.py:258] ^^^^^^^^^^
+I0918 13:45:08.246685 139829652374592 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 543, in main
+I0918 13:45:08.246731 139829652374592 run_docker.py:258] predict_structure(
+I0918 13:45:08.246778 139829652374592 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 256, in predict_structure
+I0918 13:45:08.246907 139829652374592 run_docker.py:258] feature_dict = data_pipeline.process(
+I0918 13:45:08.246953 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.246997 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 264, in process
+I0918 13:45:08.247042 139829652374592 run_docker.py:258] chain_features = self._process_single_chain(
+I0918 13:45:08.247091 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.247137 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 212, in _process_single_chain
+I0918 13:45:08.247183 139829652374592 run_docker.py:258] chain_features = self._monomer_data_pipeline.process(
+I0918 13:45:08.247227 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.247272 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 163, in process
+I0918 13:45:08.247317 139829652374592 run_docker.py:258] jackhmmer_uniref90_result = run_msa_tool(
+I0918 13:45:08.247362 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^
+I0918 13:45:08.247406 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 94, in run_msa_tool
+I0918 13:45:08.247457 139829652374592 run_docker.py:258] result = msa_runner.query(input_fasta_path, max_sto_sequences)[0]  # pytype: disable=wrong-arg-count
+I0918 13:45:08.247509 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.247554 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 170, in query
+I0918 13:45:08.247598 139829652374592 run_docker.py:258] return self.query_multiple([input_fasta_path], max_sequences)[0]
+I0918 13:45:08.247642 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.247686 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 181, in query_multiple
+I0918 13:45:08.247730 139829652374592 run_docker.py:258] single_chunk_results.append([self._query_chunk(
+I0918 13:45:08.247773 139829652374592 run_docker.py:258] ^^^^^^^^^^^^^^^^^^
+I0918 13:45:08.247816 139829652374592 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 142, in _query_chunk
+I0918 13:45:08.247860 139829652374592 run_docker.py:258] raise RuntimeError(
+I0918 13:45:08.247907 139829652374592 run_docker.py:258] RuntimeError: Jackhmmer failed
+I0918 13:45:08.247952 139829652374592 run_docker.py:258] stderr:
+I0918 13:45:08.248000 139829652374592 run_docker.py:258] 
+I0918 13:45:08.248052 139829652374592 run_docker.py:258] Error: Parse failed (sequence file /tmp/tmpqkldtnfa.fasta):
+I0918 13:45:08.248103 139829652374592 run_docker.py:258] Line 2: illegal character :
+I0918 13:45:08.248156 139829652374592 run_docker.py:258] 
+I0918 13:45:08.248201 139829652374592 run_docker.py:258] 
+I0918 13:45:08.248248 139829652374592 run_docker.py:258] 
+Running command: python3 /mnt/scratch/alphafold/docker/run_docker.py --fasta_paths /mnt/users/chris01/CombFold/reference-fasta/MTR3_RRP41.fasta --max_template_date 2022-01-01 --data_dir /mnt/scratch/alphafold_ref --output_dir /mnt/users/chris01/combfold-experiment/2nn6 --model_preset multimer
+I0918 13:45:09.908800 140603233858624 run_docker.py:116] Mounting /mnt/users/chris01/CombFold/reference-fasta -> /mnt/fasta_path_0
+I0918 13:45:09.908907 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref90 -> /mnt/uniref90_database_path
+I0918 13:45:09.908967 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/mgnify -> /mnt/mgnify_database_path
+I0918 13:45:09.909010 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref -> /mnt/data_dir
+I0918 13:45:09.909044 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif/mmcif_files -> /mnt/template_mmcif_dir
+I0918 13:45:09.909079 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif -> /mnt/obsolete_pdbs_path
+I0918 13:45:09.909114 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniprot -> /mnt/uniprot_database_path
+I0918 13:45:09.909147 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_seqres -> /mnt/pdb_seqres_database_path
+I0918 13:45:09.909184 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref30 -> /mnt/uniref30_database_path
+I0918 13:45:09.909221 140603233858624 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/bfd -> /mnt/bfd_database_path
+I0918 13:45:10.552773 140603233858624 run_docker.py:258] /bin/bash: /opt/conda/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+I0918 13:45:13.365175 140603233858624 run_docker.py:258] I0918 17:45:13.364394 140447855047296 templates.py:858] Using precomputed obsolete pdbs /mnt/obsolete_pdbs_path/obsolete.dat.
+I0918 13:45:14.031736 140603233858624 run_docker.py:258] I0918 17:45:14.031071 140447855047296 xla_bridge.py:863] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA
+I0918 13:45:14.032422 140603233858624 run_docker.py:258] I0918 17:45:14.031857 140447855047296 xla_bridge.py:863] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0918 13:45:20.449192 140603233858624 run_docker.py:258] I0918 17:45:20.448431 140447855047296 run_alphafold.py:524] Have 25 models: ['model_1_multimer_v3_pred_0', 'model_1_multimer_v3_pred_1', 'model_1_multimer_v3_pred_2', 'model_1_multimer_v3_pred_3', 'model_1_multimer_v3_pred_4', 'model_2_multimer_v3_pred_0', 'model_2_multimer_v3_pred_1', 'model_2_multimer_v3_pred_2', 'model_2_multimer_v3_pred_3', 'model_2_multimer_v3_pred_4', 'model_3_multimer_v3_pred_0', 'model_3_multimer_v3_pred_1', 'model_3_multimer_v3_pred_2', 'model_3_multimer_v3_pred_3', 'model_3_multimer_v3_pred_4', 'model_4_multimer_v3_pred_0', 'model_4_multimer_v3_pred_1', 'model_4_multimer_v3_pred_2', 'model_4_multimer_v3_pred_3', 'model_4_multimer_v3_pred_4', 'model_5_multimer_v3_pred_0', 'model_5_multimer_v3_pred_1', 'model_5_multimer_v3_pred_2', 'model_5_multimer_v3_pred_3', 'model_5_multimer_v3_pred_4']
+I0918 13:45:20.449335 140603233858624 run_docker.py:258] I0918 17:45:20.448606 140447855047296 run_alphafold.py:538] Using random seed 49792583883614400 for the data pipeline
+I0918 13:45:20.449393 140603233858624 run_docker.py:258] I0918 17:45:20.448798 140447855047296 run_alphafold.py:245] Predicting MTR3_RRP41
+I0918 13:45:20.451683 140603233858624 run_docker.py:258] I0918 17:45:20.451030 140447855047296 pipeline_multimer.py:210] Running monomer pipeline on chain A: MTR3_RRP41
+I0918 13:45:20.452211 140603233858624 run_docker.py:258] I0918 17:45:20.451350 140447855047296 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /tmp/tmpm4zh2mip/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /tmp/tmprxamscii.fasta /mnt/uniref90_database_path/uniref90.fasta"
+I0918 13:45:20.452612 140603233858624 run_docker.py:258] I0918 17:45:20.452327 140447855047296 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I0918 13:45:20.461661 140603233858624 run_docker.py:258] I0918 17:45:20.461239 140447855047296 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 0.009 seconds
+I0918 13:45:20.462485 140603233858624 run_docker.py:258] Traceback (most recent call last):
+I0918 13:45:20.462636 140603233858624 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 570, in <module>
+I0918 13:45:20.462732 140603233858624 run_docker.py:258] app.run(main)
+I0918 13:45:20.462808 140603233858624 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 312, in run
+I0918 13:45:20.462919 140603233858624 run_docker.py:258] _run_main(main, args)
+I0918 13:45:20.462987 140603233858624 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 258, in _run_main
+I0918 13:45:20.463052 140603233858624 run_docker.py:258] sys.exit(main(argv))
+I0918 13:45:20.463112 140603233858624 run_docker.py:258] ^^^^^^^^^^
+I0918 13:45:20.463168 140603233858624 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 543, in main
+I0918 13:45:20.463225 140603233858624 run_docker.py:258] predict_structure(
+I0918 13:45:20.463280 140603233858624 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 256, in predict_structure
+I0918 13:45:20.463334 140603233858624 run_docker.py:258] feature_dict = data_pipeline.process(
+I0918 13:45:20.463387 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.463441 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 264, in process
+I0918 13:45:20.463495 140603233858624 run_docker.py:258] chain_features = self._process_single_chain(
+I0918 13:45:20.463553 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.463609 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 212, in _process_single_chain
+I0918 13:45:20.463735 140603233858624 run_docker.py:258] chain_features = self._monomer_data_pipeline.process(
+I0918 13:45:20.463789 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.463842 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 163, in process
+I0918 13:45:20.463895 140603233858624 run_docker.py:258] jackhmmer_uniref90_result = run_msa_tool(
+I0918 13:45:20.463948 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^
+I0918 13:45:20.463999 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 94, in run_msa_tool
+I0918 13:45:20.464050 140603233858624 run_docker.py:258] result = msa_runner.query(input_fasta_path, max_sto_sequences)[0]  # pytype: disable=wrong-arg-count
+I0918 13:45:20.464100 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.464154 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 170, in query
+I0918 13:45:20.464206 140603233858624 run_docker.py:258] return self.query_multiple([input_fasta_path], max_sequences)[0]
+I0918 13:45:20.464257 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.464309 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 181, in query_multiple
+I0918 13:45:20.464360 140603233858624 run_docker.py:258] single_chunk_results.append([self._query_chunk(
+I0918 13:45:20.464412 140603233858624 run_docker.py:258] ^^^^^^^^^^^^^^^^^^
+I0918 13:45:20.464462 140603233858624 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 142, in _query_chunk
+I0918 13:45:20.464516 140603233858624 run_docker.py:258] raise RuntimeError(
+I0918 13:45:20.464570 140603233858624 run_docker.py:258] RuntimeError: Jackhmmer failed
+I0918 13:45:20.464622 140603233858624 run_docker.py:258] stderr:
+I0918 13:45:20.464680 140603233858624 run_docker.py:258] 
+I0918 13:45:20.464742 140603233858624 run_docker.py:258] Error: Parse failed (sequence file /tmp/tmprxamscii.fasta):
+I0918 13:45:20.464803 140603233858624 run_docker.py:258] Line 2: illegal character :
+I0918 13:45:20.464864 140603233858624 run_docker.py:258] 
+I0918 13:45:20.464919 140603233858624 run_docker.py:258] 
+I0918 13:45:20.464972 140603233858624 run_docker.py:258] 
+Running command: python3 /mnt/scratch/alphafold/docker/run_docker.py --fasta_paths /mnt/users/chris01/CombFold/reference-fasta/CSL4_RRP6.fasta --max_template_date 2022-01-01 --data_dir /mnt/scratch/alphafold_ref --output_dir /mnt/users/chris01/combfold-experiment/2nn6 --model_preset multimer
+I0918 13:45:22.363315 139698424009792 run_docker.py:116] Mounting /mnt/users/chris01/CombFold/reference-fasta -> /mnt/fasta_path_0
+I0918 13:45:22.363426 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref90 -> /mnt/uniref90_database_path
+I0918 13:45:22.363488 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/mgnify -> /mnt/mgnify_database_path
+I0918 13:45:22.363530 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref -> /mnt/data_dir
+I0918 13:45:22.363564 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif/mmcif_files -> /mnt/template_mmcif_dir
+I0918 13:45:22.363599 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_mmcif -> /mnt/obsolete_pdbs_path
+I0918 13:45:22.363634 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniprot -> /mnt/uniprot_database_path
+I0918 13:45:22.363668 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/pdb_seqres -> /mnt/pdb_seqres_database_path
+I0918 13:45:22.363704 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/uniref30 -> /mnt/uniref30_database_path
+I0918 13:45:22.363741 139698424009792 run_docker.py:116] Mounting /mnt/scratch/alphafold_ref/bfd -> /mnt/bfd_database_path
+I0918 13:45:22.920569 139698424009792 run_docker.py:258] /bin/bash: /opt/conda/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+I0918 13:45:25.729701 139698424009792 run_docker.py:258] I0918 17:45:25.728905 139670805574272 templates.py:858] Using precomputed obsolete pdbs /mnt/obsolete_pdbs_path/obsolete.dat.
+I0918 13:45:26.396321 139698424009792 run_docker.py:258] I0918 17:45:26.395648 139670805574272 xla_bridge.py:863] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA
+I0918 13:45:26.396827 139698424009792 run_docker.py:258] I0918 17:45:26.396426 139670805574272 xla_bridge.py:863] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0918 13:45:32.810263 139698424009792 run_docker.py:258] I0918 17:45:32.809561 139670805574272 run_alphafold.py:524] Have 25 models: ['model_1_multimer_v3_pred_0', 'model_1_multimer_v3_pred_1', 'model_1_multimer_v3_pred_2', 'model_1_multimer_v3_pred_3', 'model_1_multimer_v3_pred_4', 'model_2_multimer_v3_pred_0', 'model_2_multimer_v3_pred_1', 'model_2_multimer_v3_pred_2', 'model_2_multimer_v3_pred_3', 'model_2_multimer_v3_pred_4', 'model_3_multimer_v3_pred_0', 'model_3_multimer_v3_pred_1', 'model_3_multimer_v3_pred_2', 'model_3_multimer_v3_pred_3', 'model_3_multimer_v3_pred_4', 'model_4_multimer_v3_pred_0', 'model_4_multimer_v3_pred_1', 'model_4_multimer_v3_pred_2', 'model_4_multimer_v3_pred_3', 'model_4_multimer_v3_pred_4', 'model_5_multimer_v3_pred_0', 'model_5_multimer_v3_pred_1', 'model_5_multimer_v3_pred_2', 'model_5_multimer_v3_pred_3', 'model_5_multimer_v3_pred_4']
+I0918 13:45:32.810465 139698424009792 run_docker.py:258] I0918 17:45:32.809734 139670805574272 run_alphafold.py:538] Using random seed 240047877253937548 for the data pipeline
+I0918 13:45:32.810539 139698424009792 run_docker.py:258] I0918 17:45:32.809943 139670805574272 run_alphafold.py:245] Predicting CSL4_RRP6
+I0918 13:45:32.812128 139698424009792 run_docker.py:258] I0918 17:45:32.811882 139670805574272 pipeline_multimer.py:210] Running monomer pipeline on chain A: CSL4_RRP6
+I0918 13:45:32.812643 139698424009792 run_docker.py:258] I0918 17:45:32.812092 139670805574272 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /tmp/tmp2sxl6ssr/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /tmp/tmpf57alyd0.fasta /mnt/uniref90_database_path/uniref90.fasta"
+I0918 13:45:32.813472 139698424009792 run_docker.py:258] I0918 17:45:32.813066 139670805574272 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I0918 13:45:32.822245 139698424009792 run_docker.py:258] I0918 17:45:32.821857 139670805574272 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 0.009 seconds
+I0918 13:45:32.822585 139698424009792 run_docker.py:258] Traceback (most recent call last):
+I0918 13:45:32.822664 139698424009792 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 570, in <module>
+I0918 13:45:32.822748 139698424009792 run_docker.py:258] app.run(main)
+I0918 13:45:32.822804 139698424009792 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 312, in run
+I0918 13:45:32.822879 139698424009792 run_docker.py:258] _run_main(main, args)
+I0918 13:45:32.822929 139698424009792 run_docker.py:258] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 258, in _run_main
+I0918 13:45:32.822981 139698424009792 run_docker.py:258] sys.exit(main(argv))
+I0918 13:45:32.823027 139698424009792 run_docker.py:258] ^^^^^^^^^^
+I0918 13:45:32.823075 139698424009792 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 543, in main
+I0918 13:45:32.823151 139698424009792 run_docker.py:258] predict_structure(
+I0918 13:45:32.823198 139698424009792 run_docker.py:258] File "/app/alphafold/run_alphafold.py", line 256, in predict_structure
+I0918 13:45:32.823256 139698424009792 run_docker.py:258] feature_dict = data_pipeline.process(
+I0918 13:45:32.823299 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.823342 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 264, in process
+I0918 13:45:32.823389 139698424009792 run_docker.py:258] chain_features = self._process_single_chain(
+I0918 13:45:32.823437 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.823482 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline_multimer.py", line 212, in _process_single_chain
+I0918 13:45:32.823525 139698424009792 run_docker.py:258] chain_features = self._monomer_data_pipeline.process(
+I0918 13:45:32.823568 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.823611 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 163, in process
+I0918 13:45:32.823712 139698424009792 run_docker.py:258] jackhmmer_uniref90_result = run_msa_tool(
+I0918 13:45:32.823754 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^
+I0918 13:45:32.823798 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/pipeline.py", line 94, in run_msa_tool
+I0918 13:45:32.823842 139698424009792 run_docker.py:258] result = msa_runner.query(input_fasta_path, max_sto_sequences)[0]  # pytype: disable=wrong-arg-count
+I0918 13:45:32.823886 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.823929 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 170, in query
+I0918 13:45:32.823974 139698424009792 run_docker.py:258] return self.query_multiple([input_fasta_path], max_sequences)[0]
+I0918 13:45:32.824018 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.824061 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 181, in query_multiple
+I0918 13:45:32.824103 139698424009792 run_docker.py:258] single_chunk_results.append([self._query_chunk(
+I0918 13:45:32.824146 139698424009792 run_docker.py:258] ^^^^^^^^^^^^^^^^^^
+I0918 13:45:32.824188 139698424009792 run_docker.py:258] File "/app/alphafold/alphafold/data/tools/jackhmmer.py", line 142, in _query_chunk
+I0918 13:45:32.824230 139698424009792 run_docker.py:258] raise RuntimeError(
+I0918 13:45:32.824280 139698424009792 run_docker.py:258] RuntimeError: Jackhmmer failed
+I0918 13:45:32.824332 139698424009792 run_docker.py:258] stderr:
+I0918 13:45:32.824380 139698424009792 run_docker.py:258] 
+I0918 13:45:32.824431 139698424009792 run_docker.py:258] Error: Parse failed (sequence file /tmp/tmpf57alyd0.fasta):
+I0918 13:45:32.824481 139698424009792 run_docker.py:258] Line 2: illegal character :
+I0918 13:45:32.824531 139698424009792 run_docker.py:258] 
+I0918 13:45:32.824577 139698424009792 run_docker.py:258] 
+I0918 13:45:32.824620 139698424009792 run_docker.py:258] 
+Running command: python3 /mnt/scratch/alphafold/docker/run_docker.py --fasta_paths /mnt/users/chris01/CombFold/reference-fasta/RRP42_RRP44.fasta --max_template_date 2022-01-01 --data_dir /mnt/scratch/alphafold_ref --output_dir /mnt/users/chris01/combfold-experiment/2nn6 --model_preset multimer

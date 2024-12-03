@@ -1,0 +1,14 @@
+Average Execution Time: 1.71807 seconds
+Average Execution Time: 3.11867 seconds
+Average Execution Time: 3.77874 seconds
+Average Execution Time: 0.00955444 seconds
+Average Execution Time: 0.00953233 seconds
+Average Execution Time: 0.00942579 seconds
+Average Execution Time: 0.0111575 seconds
+Average Execution Time: 0.00921234 seconds
+Average Execution Time: 6.11137 seconds
+Average Execution Time: 5.07085 seconds
+Average Execution Time: 5.11535 seconds
+Average Execution Time: 7.82481 seconds
+Average Execution Time: 1.91742 seconds
+Average Execution Time: 5.99948 seconds
